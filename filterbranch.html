@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Example Table CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" />
+    <title>Branch Page</title>
+  </head>
+  <body>
+    <!-- Main Page Header -->
+    <div class="main-page-header mb-3 bg-primary">
+      <!-- Container -->'
+      <div class="container d-flex">
+        <!-- Company Name -->
+        <div class="company-name">Amal Bank</div>
+        <!-- End of Company Name -->
+        <!-- Navigation -->
+        <nav class="navigation">
+          <li><a href="admin.html">Dashboard</a></li>
+          <!-- <li><a href="">Payment History</a></li> -->
+          <li><a href="branch.html">Branch</a></li>
+          <li><a href="user.html">User</a></li>
+          <li><a href="reporting.html">Reporting</a></li>
+          <!-- <li><a href="">Sign Out</a></li> -->
+        </nav>
+        <!-- End ofNavigation -->
+        <!-- Display Name -->
+        <div id="user-display" class="display-name ms-auto text-white"></div>
+        <!-- End of Display Name -->
+        <!-- Log out Button -->
+        <a href="index.html" id="b-logout" class="btn btn-sm text-white">▶️ Sign Out</a>
+        <!-- End of Log out Button -->
+      </div>
+      <!--End of Container -->
+    </div>
+    <!-- Main Page Header -->
+    <div class="container">
+      <h2 class="text-center">Branch Report</h2>
+      <hr />
+      <div class="button-group mt-3">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalFilter"> 👁️‍🗨️Filter By Date</button>
+        <a href="reporting.html" class="btn btn-primary">Back</a>
+      </div>
+      <table id="table-filter" class="table table-striped table-border table-hover mt-3" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Branch Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Total Of Credit</th>
+            <th>Total Of Debit</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="card-footer">
+      
+    </div>
+
+    <!-- Modal Filter By Date -->
+    <div class="modal fade" id="modalFilter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Choose Date For Filter Branch Report</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="form-filter-branch" method="PUT" action="">
+            <div class="modal-body">
+            <div class="mb-3">
+                <label for="" class="form-label">Start Date</label>
+                <input type="date" id="start-date" class="form-control" name="start-date" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">End Date</label>
+                <input type="date" id="end-date" name="" id="" class="form-control" name="end-date" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Choose Branch</label>
+                <select name="branch-name" id="branch-name" class="form-control">
+                <option value="">Kopo Amal Bank</option>
+                <option value="">Cihapit Amal Bank</option>
+                </select>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit 
+            " class="btn btn-primary">Filter</button>
+            </div>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- End Of Modal Filter By Date -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/filterBranch.js"></script>
+    <!-- <script src="js/dormant.js"></script> -->
+    <!-- <script src="js/dormantDownload.js"></script> -->
+
+    <!-- Example Table JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  </body>
+</html>

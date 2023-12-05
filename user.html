@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Example Table CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" />
+    <title>Branch Page</title>
+  </head>
+  <body>
+    <!-- Main Page Header -->
+    <div class="main-page-header mb-3 bg-primary">
+      <!-- Container -->'
+      <div class="container d-flex">
+        <!-- Company Name -->
+        <div class="company-name">Amal Bank</div>
+        <!-- End of Company Name -->
+        <!-- Navigation -->
+        <nav class="navigation">
+          <li><a href="admin.html">Dashboard</a></li>
+          <!-- <li><a href="">Payment History</a></li> -->
+          <li><a href="branch.html">Branch</a></li>
+          <li><a href="user.html">User</a></li>
+          <li><a href="reporting.html">Reporting</a></li>
+          <!-- <li><a href="">Sign Out</a></li> -->
+        </nav>
+        <!-- End ofNavigation -->
+        <!-- Display Name -->
+        <div id="user-display" class="display-name ms-auto text-white"></div>
+        <!-- End of Display Name -->
+        <!-- Log out Button -->
+        <a href="index.html" id="b-logout" class="btn btn-sm text-white">▶️ Sign Out</a>
+        <!-- End of Log out Button -->
+      </div>
+      <!--End of Container -->
+    </div>
+    <!-- End Main Page Header -->
+    <div class="container">
+      <h2 class="text-center">Data User</h2>
+      <hr />
+      <div class="button-group">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addUser">➕Add User</button>
+
+        <!-- <button type="button" class="btn btn-primary">🖨️ Export To Excel</button> -->
+      </div>
+      <br /><br />
+
+      <table id="table-user" class="table table-striped" style="width: 100%">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Modal Add User-->
+      <div class="modal fade" id="addUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Form Add Data User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Form Add User -->
+            <form id="form-add-user" method="POST">
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" id="name-user" class="form-control" placeholder="Input Your Full Name" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Username</label>
+                  <input type="text" id="username" class="form-control" placeholder="username_example" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password" id="password" class="form-control" placeholder="Input Password" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" id="phone-number" class="form-control" placeholder="0938xxxxxxx" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Address</label>
+                  <textarea name="" id="address" class="form-control" rows="3" placeholder="Your Address"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" name="bsave">Save</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+            </form>
+            <!-- End Of Form Add User -->
+          </div>
+        </div>
+      </div>
+      <!-- End Of Modal Add User -->
+
+      <!-- Modal Edit User-->
+      <div class="modal fade" id="editUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Form Edit Data User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Form Edit User -->
+            <form id="form-edit-user" method="PUT">
+              <div class="modal-body">
+                <input id="id-user" type="hidden" name="id" />
+                <div class="mb-3">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" name="name-user" id="edit-name-user" class="form-control" placeholder="Input Your Full Name" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Username</label>
+                  <input type="text" id="edit-username" name="username" class="form-control" placeholder="username_example" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Password</label>
+                  <input type="password" name="password" id="edit-password" class="form-control" placeholder="Input Password" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" name="phone-number" id="edit-phone-number" class="form-control" placeholder="0938xxxxxxx" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Address</label>
+                  <textarea id="edit-address" name="address" class="form-control" rows="3" placeholder="Your Address"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" name="bsave">Save</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+            </form>
+            <!-- End Of Form Edit User -->
+          </div>
+        </div>
+      </div>
+      <!-- End Of Modal Edit User -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/regist.js"></script> -->
+    <script src="js/user.js"></script>
+
+    <!-- Example Table JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  </body>
+</html>

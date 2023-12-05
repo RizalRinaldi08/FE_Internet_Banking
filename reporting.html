@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Reporting</title>
+  </head>
+  <body>
+    <!-- Main Page Header -->
+    <div class="main-page-header mb-3 bg-primary">
+      <!-- Container -->'
+      <div class="container d-flex">
+        <!-- Company Name -->
+        <div class="company-name">Amal Bank</div>
+        <!-- End of Company Name -->
+        <!-- Navigation -->
+        <nav class="navigation">
+          <li><a href="admin.html">Dashboard</a></li>
+          <!-- <li><a href="">Payment History</a></li> -->
+          <li><a href="branch.html">Branch</a></li>
+          <li><a href="user.html">User</a></li>
+          <li><a href="reporting.html">Reporting</a></li>
+          <!-- <li><a href="">Sign Out</a></li> -->
+        </nav>
+        <!-- End ofNavigation -->
+        <!-- Display Name -->
+        <div id="user-display" class="display-name ms-auto text-white"></div>
+        <!-- End of Display Name -->
+        <!-- Log out Button -->
+        <a href="index.html" id="b-logout" class="btn btn-sm text-white">▶️ Sign Out</a>
+        <!-- End of Log out Button -->
+      </div>
+      <!--End of Container -->
+    </div>
+    <!-- Main Page Header -->
+    <div class="container align-items-center">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="image/branchreport.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Branch Report</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <button id="branchReport" class="btn btn-primary btn-sm">Check Branch Report</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="image/filter" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Period Branch Report</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <button id="branchFilter" class="btn btn-primary btn-sm">Branch Report by Filter</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="image/dormant" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Dormant Account</h5>
+              <p class="card-text">Accounts that are currently inactive due to not making transactions for more than the last 3 months</p>
+            </div>
+            <div class="card-footer">
+              <button id="dormantAccounts" class="btn btn-primary btn-sm text-white">Check Dormant Accounts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/logout.js"></script>
+    <!-- <script src="js/filterBranch.js"></script> -->
+    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("branchReport").addEventListener("click", function () {
+        window.location.href = "reportbranch.html";
+      });
+    </script>
+    <script>
+      document.getElementById("dormantAccounts").addEventListener("click", function () {
+        window.location.href = "dormant.html";
+      });
+    </script>
+    <script>
+      document.getElementById("branchFilter").addEventListener("click", function () {
+        window.location.href = "filterBranch.html";
+      });
+    </script>
+  </body>
+</html>

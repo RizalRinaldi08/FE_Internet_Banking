@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Main Body Styling */
+body {
+  height: 100vh;
+  background-image: url(../image/main-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Card : Sample Text */
+#sample-text-card {
+  margin: 0 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* font-family: Comfortaa; */
+  /* background-color: #cfc7c79a; */
+  color: white;
+}
+
+#sample-text-card h1 {
+  font-size: 65px;
+}
+
+#sample-text-card p {
+  font-size: 14px;
+}
+.button-wrapper a {
+  width: 200px;
+  color: white;
+  padding: 15px;
+  box-shadow: 0 3px 6px rgb(3, 3, 85);
+}
+.register {
+  margin-right: 7px;
+  background-color: #ff4e00;
+  border: 1px solid #8b2b00;
+}
+.login {
+  background-color: #ff8114;
+  border: 1px solid #543800;
+}
+.card {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.card .form-control {
+  margin: 10px 0;
+  box-shadow: 0 3px 6px rgb(3, 3, 85);
+}
+.card .card-title {
+  color: white;
+}
+.card button {
+  background-color: #ff4e00;
+  border: 1px solid #543800;
+  box-shadow: 0 3px 6px rgb(3, 3, 85);
+  color: white;
+  width: 200px;
+  margin: 10px 0;
+}
+
+/* .containerMain {
+  width: auto;
+  height: auto;
+  padding: 70px 50px;
+  display: flex;
+  /* align-items: center; */
+/* background-color: grey; */
+/* border: solid; */
+/* justify-content: center;
+} */
+
+/* li {
+  list-style: none;
+  color: rgb(160, 156, 156);
+} */

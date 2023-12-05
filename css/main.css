@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Main Body Styling */
+body {
+  background-color: rgb(211, 217, 226);
+  /* background-image: url(../image/main-bg.png); */
+}
+.container {
+  margin: 10px auto;
+}
+
+/* Main Page Header */
+.main-page-header {
+  padding: 10px 0px;
+}
+
+/* Company Name */
+.main-page-header .company-name {
+  font-weight: 600;
+  color: white;
+}
+/* Navigation */
+.navigation {
+  /* border: 1px solid white; */
+  margin-left: 20px;
+}
+
+.navigation li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 15px;
+}
+
+.navigation li a {
+  color: white;
+  text-decoration: none;
+}
+
+.display-name {
+  font-weight: 600;
+}
+
+/* Transaction Button */
+#transact-btn {
+  background-color: #ff8114;
+  border: 1px solid #543800;
+  color: black;
+  box-shadow: 0 3px 6px rgb(3, 3, 85);
+}
+
+/* Add Account Button */
+#add-account-btn {
+  background-color: #ff4e00;
+  border: 1px solid #8b2b00;
+  box-shadow: 0 3px 6px rgb(3, 3, 85);
+  color: white;
+}
+
+/* Offcanvas Backgroun */
+.offcanvas {
+  background-color: rgb(91, 159, 238);
+}
+
+/* Transaction Button */
+.transaction-btn {
+  background-color: #ff4e00;
+  border: 1px solid #8b2b00;
+  color: white;
+}
+
+/* Card: Transfer Card */
+.transfer-card{
+  display: none;
+}
+
+/* Card: Transfer Card */
+.deposit-card{
+  display: none;
+}
+/* Card: Withdraw Card */
+.withdraw-card{
+  display: none;
+}

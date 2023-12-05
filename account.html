@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Example Table CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" />
+    <title>Account</title>
+  </head>
+  <body>
+    <!-- Main Page Header -->
+    <div class="main-page-header mb-3 bg-primary">
+      <!-- Container -->'
+      <div class="container d-flex">
+        <!-- Company Name -->
+        <div class="company-name">Amal Bank</div>
+        <!-- End of Company Name -->
+        <!-- Navigation -->
+        <nav class="navigation">
+          <li><a href="admin.html">Dashboard</a></li>
+          <!-- <li><a href="">Payment History</a></li> -->
+          <li><a href="branch.html">Branch</a></li>
+          <li><a href="user.html">User</a></li>
+          <li><a href="reporting.html">Reporting</a></li>
+          <!-- <li><a href="">Sign Out</a></li> -->
+        </nav>
+        <!-- End ofNavigation -->
+        <!-- Display Name -->
+        <div id="user-display" class="display-name ms-auto text-white"></div>
+        <!-- End of Display Name -->
+        <!-- Log out Button -->
+        <a href="index.html" class="btn btn-sm text-white"> ▶️ Sign Out </a>
+        <!-- End of Log out Button -->
+      </div>
+      <!--End of Container -->
+    </div>
+    <!-- End Main Page Header -->
+    <div class="container">
+      <h2 class="text-center">Data Account</h2>
+      <hr />
+      <div class="button-group">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAccount">➕Add Account</button>
+        <a href="user.html" class="btn btn-primary">Back</a>
+        <!-- <button type="button" class="btn btn-primary">🖨️ Export To Excel</button> -->
+      </div>
+      <br /><br />
+
+      <table id="table-account" class="table table-striped" style="width: 100%">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Branch</th>
+            <th>Account Name</th>
+            <th>Account Number</th>
+            <th>Status</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+      </table>
+
+      <!-- Modal Add Account-->
+      <div class="modal fade" id="addAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Form Data Account</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Form Add User -->
+            <form id="form-add-account" method="POST">
+              <div class="modal-body">
+                <input type="text" id="id-user" hidden>
+                <div class="mb-3">
+                  <label class="form-label">Name User</label>
+                  <input disabled type="text" id="name" class="form-control"  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Account Name</label>
+                  <input type="text" id="account-name" class="form-control" placeholder="Input Your Account Name" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Account Number</label>
+                  <input type="text" id="account-number" class="form-control" placeholder="1234xxxxxxxx" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Branch Name</label><br>
+                  <select name="" id="branch" class="form-control">
+                    <option value="">Kopo Amal </option>
+                    <option value="">Sukajadi Amal</option>
+                  </select>
+                  <!-- <input type="text" id="branch-name" class="form-control" placeholder="Amal Bank Jakarta" /> -->
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Balance</label>
+                  <input type="text" id="balance" class="form-control" placeholder="Minimum Top Up 50.000" />
+                </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary" name="bsave">Save</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </form>
+            <!-- End Of Form Add User -->
+          </div>
+        </div>
+      </div>
+      <!-- End Of Modal Add Account -->
+
+      <!-- Modal Edit Account -->
+      <div class="modal fade" id="addAccount" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Form Data Account</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Form Add User -->
+            <form id="form-edit-account" method="POST">
+              <div class="modal-body">
+                <input type="text" id="id-user" hidden>
+                <div class="mb-3">
+                  <label class="form-label">Name User</label>
+                  <input disabled type="text" id="name" class="form-control"  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Account Name</label>
+                  <input type="text" id="account-name" class="form-control" placeholder="Input Your Account Name" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Account Number</label>
+                  <input type="text" id="account-number" class="form-control" placeholder="1234xxxxxxxx" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Branch Name</label><br>
+                  <select name="" id="branch" class="form-control">
+                    <option value="">Kopo Amal </option>
+                    <option value="">Sukajadi Amal</option>
+                  </select>
+                  <!-- <input type="text" id="branch-name" class="form-control" placeholder="Amal Bank Jakarta" /> -->
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Balance</label>
+                  <input type="text" id="balance" class="form-control" placeholder="Minimum Top Up 50.000" />
+                </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary" name="bsave">Save</button>
+                  <button  class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </form>
+            <!-- End Of Form Add User -->
+          </div>
+        </div>
+      </div>
+      <!-- End Of Modal Edit Account -->
+    </div>
+
+    <!-- Modal Close Account -->
+<div class="modal fade" id="modalClose" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Close Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are You Serious To Close This Account Bank ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- End Of Modal Close Account -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/account.js"></script>
+    <!-- <script src="js/regist.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+  </body>
+</html>

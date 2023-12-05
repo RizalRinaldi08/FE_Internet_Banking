@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <title>Register</title>
+  </head>
+  <body class="d-flex align-items-center justify-content-center">
+    <!-- Card : Registration Form Card -->
+    <div class="card registration-form-card col-6 bg-transparent border-0">
+      <!-- Card Body -->
+      <div class="card-body">
+        <!-- Form Header -->
+        <h1 class="form-header card-title">🗒️ Register</h1>
+        <!-- End of Form Header -->
+
+        <!-- Registration Form -->
+        <form id="reg_form" class="reg-form">
+          <!-- Row -->
+          <div class="row">
+            <!-- Form Group -->
+            <div class="form-group col">
+              <input type="text" name="full_name" class="full-name form-control form-control-lg" placeholder="Input Your Name" />
+            </div>
+            <!-- End of Form Group -->
+          </div>
+          <!-- End of Row -->
+
+          <!-- Form Group -->
+          <div class="form-group col">
+            <input type="text" name="username" class="username form-control form-control-lg" placeholder="Enter Username" />
+          </div>
+          <!-- End of Form Group -->
+
+          <!-- Form Group -->
+          <div class="form-group col">
+            <input type="tel" name="phone_number" class="phone-number form-control form-control-lg" placeholder="Enter Phone Number" />
+          </div>
+          <!-- End of Form Group -->
+
+          <!-- Row -->
+          <div class="row">
+            <!-- Form Group -->
+            <div class="form-group col">
+              <input type="password" name="password" class="password form-control form-control-lg" placeholder="Enter Password" />
+            </div>
+            <!-- End of Form Group -->
+
+            <!-- Form Group -->
+            <div class="form-group col">
+              <input type="password" name="confirm_password" class="confirm form-control form-control-lg" placeholder="Confirm Password" />
+            </div>
+            <!-- End of Form Group -->
+          </div>
+          <!-- End of Row -->
+
+          <!-- Form Group -->
+          <div class="form-group col">
+            <textarea name="" id="address" cols="30" rows="2" class=" address form-control-lg" placeholder="Address"></textarea>
+          </div>
+          <!-- End Of Form Group -->
+          <!-- Form Group -->
+          <div class="form-group col"><button class="btn btn-lg" type="submit">Register</button></div>
+          <!-- End of Form Group -->
+        </form>
+        <!-- End ofRegistration Form -->
+
+        <!-- Card Text -->
+        <p class="card-text text-white my-2">
+          Already have an account ? <span class="text-warning"><a href="login.html" class="btn bt-sm text-warning">Sign In</a></span>
+        </p>
+        <!-- End of Card Text -->
+
+        <!-- Back Button to Landing Page -->
+        <small class="text-warning">👈<a href="index.html" class="btn btn-sm text-warning">Back</a> </small>
+        <!-- End of Back Button to Landing Page -->
+      </div>
+      <!-- End of Card Body -->
+    </div>
+    <!-- Card : End of Registration Form Card -->
+    <script src="js/regist.js"></script>
+  </body>
+</html>
